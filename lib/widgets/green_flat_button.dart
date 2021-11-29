@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class GreenFlatBtn extends StatelessWidget {
-  // final Function handler;
-  // GreenFlatBtn(this.handler);
+  final Function handler;
+  GreenFlatBtn(this.handler);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class GreenFlatBtn extends StatelessWidget {
       width: double.infinity,
       child: FlatButton(
         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        onPressed: () {},
+        onPressed: () => handler('Yes'),
         color: Colors.green,
         child: Text(
           'YES',
